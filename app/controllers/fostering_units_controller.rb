@@ -11,11 +11,13 @@ class FosteringUnitsController < ApplicationController
       #Respuesta
       respond_to do |format|
         format.json { render(json: @fostering_unit.price ) }
+        format.html { render html: @fostering_unit.price }
       end
     else
       #respuesta con error
       respond_to do |format|
         format.json { render(json: "No Existe Fecha" ) }
+        format.html { render html: "No Existe Fecha"}
       end
     end
   end
